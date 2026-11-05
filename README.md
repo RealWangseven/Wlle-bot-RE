@@ -3,19 +3,7 @@
 > [!TIP]
 > **这是一个开源项目复现与适配项目。** 基于 [小智 ESP32](https://github.com/78/xiaozhi-esp32) 与现有瓦力制作资料，先复现联网语音聊天，再适配瓦力动作与遥控。本文记录实施框架，功能完成情况以实际验证为准。
 
-
-<p align="center">
-  <a href="https://github.com/espressif/esp-idf" title="ESP-IDF · 固件开发"><img src="https://cdn.simpleicons.org/espressif/E7352C" width="80" height="80" alt="ESP-IDF"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/espressif/esptool" title="esptool · 固件烧录"><img src="https://skillicons.dev/icons?i=python&theme=light" width="80" height="80" alt="Python / esptool"></a>
-  &nbsp;&nbsp;
-  <a href="https://git-scm.com/" title="Git · 版本管理"><img src="https://skillicons.dev/icons?i=git&theme=light" width="80" height="80" alt="Git"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/78/xiaozhi-esp32" title="GitHub · 源码仓库"><img src="https://skillicons.dev/icons?i=github&theme=light" width="80" height="80" alt="GitHub"></a>
-  &nbsp;&nbsp;
-  <a href="https://code.visualstudio.com/" title="VS Code · 代码编辑"><img src="https://skillicons.dev/icons?i=vscode&theme=light" width="80" height="80" alt="VS Code"></a>
-</p>
-
+![ESP-IDF](https://cdn.simpleicons.org/espressif/E7352C)    ![Python / esptool](https://skillicons.dev/icons?i=python&theme=light)    ![Git](https://skillicons.dev/icons?i=git&theme=light)    ![GitHub](https://skillicons.dev/icons?i=github&theme=light)    ![VS Code](https://skillicons.dev/icons?i=vscode&theme=light)
 
 ## 1. 概览
 
@@ -39,10 +27,6 @@
 - 加入头颈、眼睛、手臂和履带动作。
 - 通过小智 MCP 工具调用有限、明确的动作。
 - 在机械安装后重新确认角度、供电、收音和出声效果。
-
-### 后续
-
-安卓遥控、摄像头、视觉交互、自定义动作和状态显示
 
 ## 3. 整体架构
 
@@ -74,13 +58,6 @@ flowchart TB
 | 语音对话 | 用户 → 麦克风 → 小智设备端 → 后端识别与对话 → 语音合成 → 设备播放 |
 | 动作执行 | 后端工具调用 → 设备端 MCP 工具 → 动作控制模块 → 舵机 |
 
-图中是拟采用的语音识别、大模型、语音合成链路。动作工具与舵机控制属于后续开发部分，尚未实现。
-
-
-ESP32-S3 是语音与设备控制终端，大模型不在板上运行。模型 API 通常由兼容后端接入；不能假定把任意 API 地址和密钥填进固件即可使用。
-
-本框架以本地资料中的 ESP32-S3 单板方案为基础，不沿用早先 Gitee 项目的树莓派＋Arduino 架构。
-
 ## 4. 硬件模块
 
 | 模块 | 当前候选或资料规格 | 作用 | 当前处理 |
@@ -95,8 +72,6 @@ ESP32-S3 是语音与设备控制终端，大模型不在板上运行。模型 A
 | 电池系统 | 清单为 1S2P 电池及两个 5V 充放电模块 | 移动供电 | 型号、保护及负载能力待核实 |
 | 开关及线材 | 自锁开关、触摸开关、杜邦线等 | 操作与连接 | 补齐接线与固定方案 |
 | 瓦力模型 | 本地四张结构参考图 | 外壳、传动与安装 | 3D打印 |
-
-
 
 ## 5. 软件模块
 
@@ -127,7 +102,7 @@ ESP32-S3 是语音与设备控制终端，大模型不在板上运行。模型 A
 | 功放 BCLK | 15 |
 | 功放 LRC | 16 |
 
-这组音频信号引脚与核查时小智的 [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) 中的 SIMPLEX 配置一致；不代表整个板型、无屏配置、按键和动作已适配。
+音频信号引脚与小智的 [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) 中的 SIMPLEX 配置一致
 
 ### 动作
 
@@ -142,11 +117,9 @@ ESP32-S3 是语音与设备控制终端，大模型不在板上运行。模型 A
 | 左眼 | 46 |
 | 右眼 | 3 |
 
-移植前重新检查 GPIO 的输入输出能力、启动约束与外设冲突；必要时改线或使用合适的舵机驱动模块。不能假定原图的每个针脚都适合直接驱动舵机。
-
 ## 7. 动作接口设计
 
-以下为计划新增的接口名称，不是小智现成的瓦力功能。
+
 
 | 接口示例 | 行为 | 约束 |
 | --- | --- | --- |
@@ -156,55 +129,17 @@ ESP32-S3 是语音与设备控制终端，大模型不在板上运行。模型 A
 | `self.walle.drive` | 低速、限时移动 | 速度和持续时间设上限 |
 | `self.walle.stop` | 停止履带并取消待执行移动 | 本地停止不依赖云端返回 |
 
-连续旋转舵机通过中位附近的脉宽控制停止、方向与速度，不能当作位置舵机指定转角。左右履带分别校准停止值；没有传感器反馈时，不承诺精确移动距离。
+## 8. 资料与文件
 
-## 8. 固件接入路线
-
-### 优先核实原工程
-
-取得作者源码，确认是否已经基于小智以及对应版本。若已集成语音与动作，优先理解并修改现有工程，保留其校准及遥控逻辑。
-
-### 源码无法取得时
-
-以已支持的 ESP32-S3 小智板型配置为起点，完成音频适配，再重新实现动作模块。原固件 BIN 可用于恢复原功能，但不能像源码一样直接加入功能。原 APK 的协议没有确认前，不承诺兼容。
-
-不要直接刷入通用固件后期待原动作和遥控仍然存在。烧录前保存可恢复的原始固件及明确的版本信息。
-
-## 9. 实施与验收
-
-| 阶段 | 工作内容 | 完成标准 |
-| --- | --- | --- |
-| A：资料补齐 | 板型、完整固件、源码及供电模块信息 | 能明确选择烧录方案和接线方案 |
-| B：纯语音台架 | USB 供电，仅接主控和音频 | 多轮收音与播放正常，重启后可重新连接 |
-| C：一个关节 | 单独验证舵机输出并校准 | 可控、能停止、不碰撞、不引起主控重启 |
-| D：整机动作 | 逐项接入关节与履带 | 限位有效，停止优先，移动超时能停 |
-| E：实体安装 | 固定、走线、供电与声学检查 | 关节不拉线，收音播放正常，负载下供电稳定 |
-| F：可选遥控 | 核实或重写遥控协议 | 遥控与语音指令不会相互争抢 |
-
-先在机身外验证，舵机校准后再装摇臂或连接负载。使用 Mac 烧录时选择支持 macOS 的工具和匹配固件，不使用资料中的 Windows EXE。
-
-## 10. 供电与可替换设计
-
-- 语音主控和舵机分支分别核算供电，舵机电流不通过开发板小电流供电路径。
-- 信号参考地和电源接法按最终模块规格确认。
-- 电池保护、充电、升压、负载输出和 USB 同时接入关系必须核实；暂不照搬未确认模块的供电图。
-- 采用可拆支架和标注清楚的插接线，记录每个接口的电压、极性与信号。
-- 模块替换同时核对电压、电平、引脚、协议和固件支持；同形插头不等于兼容。
-
-
-## 12. 资料与文件
-
-
-
-结构图：[正面](</Users/wangqi/Desktop/机器人3视图/1.png>) · [侧面](</Users/wangqi/Desktop/机器人3视图/2.png>) · [背面](</Users/wangqi/Desktop/机器人3视图/3.png>) · [俯视](</Users/wangqi/Desktop/机器人3视图/4.png>)。
+结构图：[正面](/Users/wangqi/Desktop/机器人3视图/1.png) · [侧面](/Users/wangqi/Desktop/机器人3视图/2.png) · [背面](/Users/wangqi/Desktop/机器人3视图/3.png) · [俯视](/Users/wangqi/Desktop/机器人3视图/4.png)。
 
 ### 在线仓库与技术资料
 
-| 项目或文档 | 用途 | 链接 |
-| --- | --- | --- |
-| 小智 ESP32 主仓库 | 设备端固件及板型适配 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) |
-| 小智音频引脚配置 | 比对当前音频接线 | [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) |
-| 小智 MCP 扩展文档 | 注册设备动作工具 | [docs/mcp-usage.md](https://github.com/78/xiaozhi-esp32/blob/main/docs/mcp-usage.md) |
-| 早期瓦力制作仓库 | 参考机械结构与另一套控制方案 | [Roboen／瓦力机器人制作](https://gitee.com/roboen/wally-robot-manufacturing) |
+| 项目或文档        | 用途              | 链接                                                                                                                   |
+| ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 小智 ESP32 主仓库 | 设备端固件及板型适配      | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32)                                                              |
+| 小智音频引脚配置     | 比对当前音频接线        | [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) |
+| 小智 MCP 扩展文档  | 注册设备动作工具        | [docs/mcp-usage.md](https://github.com/78/xiaozhi-esp32/blob/main/docs/mcp-usage.md)                                 |
+| 瓦利机器人        | 参考的机械结构与另一套控制方案 | [Roboen／瓦力机器人制作](https://gitee.com/roboen/wally-robot-manufacturing)                                                 |
 
 
