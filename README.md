@@ -1,17 +1,16 @@
-<h1 align="center">瓦力机器人</h1>
+<div align="center">
+
+# 瓦力机器人
+
+![ESP-IDF](https://img.shields.io/badge/ESP--IDF-ESP32--S3-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+![项目状态](https://img.shields.io/badge/项目状态-资料研究-22C55E?style=for-the-badge&logo=github&logoColor=white)
+
+![开发工具](https://skillicons.dev/icons?i=python,git,github,vscode&theme=light)
+
+</div>
 
 > [!TIP]
 > **这是基于开源项目复现。** 通过 [小智 ESP32](https://github.com/78/xiaozhi-esp32) 与现有瓦力制作资料以及网络上出现的机器人开源资料制作的瓦力机器人。
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python&theme=light" alt="Python / esptool" width="80">
-  &nbsp;&nbsp;
-  <img src="https://skillicons.dev/icons?i=git&theme=light" alt="Git" width="80">
-  &nbsp;&nbsp;
-  <img src="https://skillicons.dev/icons?i=github&theme=light" alt="GitHub" width="80">
-  &nbsp;&nbsp;
-  <img src="https://skillicons.dev/icons?i=vscode&theme=light" alt="VS Code" width="80">
-</p>
 
 ## 1. 概览
 
