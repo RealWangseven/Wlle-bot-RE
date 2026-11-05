@@ -1,6 +1,6 @@
 <div align="center">
 
-# 瓦力机器人
+![瓦力机器人](https://capsule-render.vercel.app/api?type=waving&height=200&text=%E7%93%A6%E5%8A%9B%E6%9C%BA%E5%99%A8%E4%BA%BA&fontAlign=50&fontAlignY=50&color=gradient)
 
 ![ESP-IDF](https://img.shields.io/badge/ESP--IDF-ESP32--S3-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
 ![项目状态](https://img.shields.io/badge/项目状态-资料研究-22C55E?style=for-the-badge&logo=github&logoColor=white)
