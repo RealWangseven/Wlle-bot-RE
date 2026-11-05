@@ -1,14 +1,9 @@
-<div align="center">
-
 # 瓦力机器人
 
 ![ESP-IDF](https://img.shields.io/badge/ESP--IDF-ESP32--S3-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
 ![项目状态](https://img.shields.io/badge/项目状态-资料研究-22C55E?style=for-the-badge&logo=github&logoColor=white)
 
 ![开发工具](https://skillicons.dev/icons?i=python,git,github,vscode&theme=light)
-
-
-</div>
 
 > [!TIP]
 > **这是基于开源项目复现。** 通过 [小智 ESP32](https://github.com/78/xiaozhi-esp32) 与现有瓦力制作资料以及网络上出现的机器人开源资料制作的瓦力机器人。
@@ -127,8 +122,6 @@ flowchart TB
 
 ## 7. 动作接口设计
 
-
-
 | 接口示例 | 行为 | 约束 |
 | --- | --- | --- |
 | `self.walle.head_turn` | 头部左右转动 | 仅允许校准后的范围 |
@@ -139,7 +132,7 @@ flowchart TB
 
 ## 8. 资料与文件
 
-结构图（汇总见 [瓦力结构图](<images/WALL·E Reference Images.md>)）：
+结构图：
 
 | 视图 | 图片 | 参考用途 |
 | --- | --- | --- |
@@ -156,5 +149,3 @@ flowchart TB
 | 小智音频引脚配置     | 比对当前音频接线        | [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) |
 | 小智 MCP 扩展文档  | 注册设备动作工具        | [docs/mcp-usage.md](https://github.com/78/xiaozhi-esp32/blob/main/docs/mcp-usage.md)                                 |
 | 瓦利机器人        | 参考的机械结构与另一套控制方案 | [Roboen／瓦力机器人制作](https://gitee.com/roboen/wally-robot-manufacturing)                                                 |
-
-
