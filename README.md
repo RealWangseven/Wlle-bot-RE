@@ -1,9 +1,9 @@
-# 小智瓦力机器人项目框架
+# 瓦力机器人
 
 > [!TIP]
 > **这是一个开源项目复现与适配项目。** 基于 [小智 ESP32](https://github.com/78/xiaozhi-esp32) 与现有瓦力制作资料，先复现联网语音聊天，再适配瓦力动作与遥控。本文记录实施框架，功能完成情况以实际验证为准。
 
-<img src="https://cdn.simpleicons.org/espressif/E7352C" alt="ESP-IDF" height="48" />    ![Python / esptool](https://skillicons.dev/icons?i=python&theme=light)    ![Git](https://skillicons.dev/icons?i=git&theme=light)    ![GitHub](https://skillicons.dev/icons?i=github&theme=light)    ![VS Code](https://skillicons.dev/icons?i=vscode&theme=light)
+![Python / esptool](https://skillicons.dev/icons?i=python&theme=light)    ![Git](https://skillicons.dev/icons?i=git&theme=light)    ![GitHub](https://skillicons.dev/icons?i=github&theme=light)    ![VS Code](https://skillicons.dev/icons?i=vscode&theme=light)   
 
 ## 1. 概览
 
