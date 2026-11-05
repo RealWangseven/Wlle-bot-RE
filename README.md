@@ -139,7 +139,14 @@ flowchart TB
 
 ## 8. 资料与文件
 
-结构图：[正面](images/walle-front.png) · [侧面](images/walle-side.png) · [背面](images/walle-back.png) · [俯视](images/walle-top.png)，汇总见 [瓦力结构图](<images/WALL·E Reference Images.md>)。
+结构图（汇总见 [瓦力结构图](<images/WALL·E Reference Images.md>)）：
+
+| 视图 | 图片 | 参考用途 |
+| --- | --- | --- |
+| 正面 | [walle-front.png](images/walle-front.png) | 眼睛、机械臂与胸前面板布局 |
+| 侧面 | [walle-side.png](images/walle-side.png) | 颈部、手臂与履带比例 |
+| 背面 | [walle-back.png](images/walle-back.png) | 背板与电池仓 |
+| 俯视 | [walle-top.png](images/walle-top.png) | 整机占地与履带间距 |
 
 ### 在线仓库与技术资料
 
