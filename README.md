@@ -34,7 +34,7 @@ flowchart TB
     user[用户说话] --> mic[INMP441 麦克风]
 
     subgraph device[实体设备]
-        mic --> esp[ESP32-S3 · 小智固件]
+        mic --> esp[ESP32-S3]
         esp --> amp[MAX98357A 功放]
         amp --> speaker[扬声器播放回复]
         esp --> tools[自定义 MCP 动作工具]
@@ -42,7 +42,7 @@ flowchart TB
         motion --> servos[头颈、眼睛、手臂与履带舵机]
     end
 
-    subgraph backend[小智兼容后端]
+    subgraph backend[后端]
         asr[语音识别] --> llm[大模型 API / 对话服务]
         llm --> tts[语音合成]
     end
