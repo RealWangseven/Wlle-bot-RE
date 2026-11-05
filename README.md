@@ -7,6 +7,7 @@
 
 ![开发工具](https://skillicons.dev/icons?i=python,git,github,vscode&theme=light)
 
+
 </div>
 
 > [!TIP]
@@ -138,7 +139,7 @@ flowchart TB
 
 ## 8. 资料与文件
 
-结构图：[正面](/Users/wangqi/Desktop/机器人3视图/1.png) · [侧面](/Users/wangqi/Desktop/机器人3视图/2.png) · [背面](/Users/wangqi/Desktop/机器人3视图/3.png) · [俯视](/Users/wangqi/Desktop/机器人3视图/4.png)。
+结构图：[正面](images/walle-front.png) · [侧面](images/walle-side.png) · [背面](images/walle-back.png) · [俯视](images/walle-top.png)，汇总见 [瓦力结构图](walle-images.md)。
 
 ### 在线仓库与技术资料
 
