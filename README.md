@@ -143,10 +143,9 @@ flowchart TB
 | 小智 MCP 扩展文档  | 注册设备动作工具        | [docs/mcp-usage.md](https://github.com/78/xiaozhi-esp32/blob/main/docs/mcp-usage.md)                                 |
 | 瓦利机器人        | 参考的机械结构与另一套控制方案 | [Roboen／瓦力机器人制作](https://gitee.com/roboen/wally-robot-manufacturing)                                                 |
 
-## 目前进度
+## 导航
 
-截至 2026-11-08，已绘制语音底板的原理图与 PCB 布局、走线初稿，并上传图纸。当前仍处于设计核对阶段，尚未完成制板及实物验证。
-
-- [images：瓦力结构参考图片](./images/)
-- [hardware：原理图、PCB 图纸与硬件说明](./hardware/)
-- [查看硬件图纸说明](./hardware/Wllebot_hardware.md)
+| 部分 | 入口 |
+| --- | --- |
+| 结构参考部分 | [进入](./images/) |
+| 硬件图纸部分 | [进入](./hardware/Wllebot_hardware.md) |
