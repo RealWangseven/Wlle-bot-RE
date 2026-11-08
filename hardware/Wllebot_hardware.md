@@ -10,7 +10,6 @@
 | [Wllebot_PCB.pdf](./Wllebot_PCB.pdf) | PCB 图纸 PDF，6 页 |
 | [pcb-preview.png](./pcb-preview.png) | 当前 PCB 设计预览截图 |
 
-
 ## 设计稿
 
 这是 2026-11-08 的设计稿归档，包含 ESP32-S3 开发板、麦克风、功放、充放电模块及电池相关接口。预览截图仅用于展示布局。

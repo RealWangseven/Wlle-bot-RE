@@ -16,15 +16,10 @@
 
 制作一个以 ESP32-S3 和小智 ESP32 为基础的实体聊天机器人，支持 Wi-Fi 联网、语音输入、后端 AI 对话和语音播放。先完成轻量聊天机器人，再逐步装入瓦力模型并加入动作与遥控。
 
-
 | 导航 | 入口 |
 | --- | --- |
 | 结构参考 | [进入](./images/WALL%C2%B7E%20Reference%20Images.md) |
 | 硬件图纸 | [进入](./hardware/Wllebot_hardware.md) |
-
-
-
-
 
 ## 功能
 
@@ -91,7 +86,6 @@ flowchart TB
 | MCP 工具 | 将转头、抬手、预设动画等包装成可调用功能 |
 | 遥控适配 | 后续按明确协议处理遥控命令 |
 
-
 ## 引脚位置
 
 ### 音频
@@ -149,4 +143,3 @@ flowchart TB
 | 小智音频引脚配置     | 比对当前音频接线        | [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) |
 | 小智 MCP 扩展文档  | 注册设备动作工具        | [docs/mcp-usage.md](https://github.com/78/xiaozhi-esp32/blob/main/docs/mcp-usage.md)                                 |
 | 瓦利机器人        | 参考的机械结构与另一套控制方案 | [Roboen／瓦力机器人制作](https://gitee.com/roboen/wally-robot-manufacturing)                                                 |
-
