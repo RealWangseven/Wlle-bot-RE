@@ -19,7 +19,7 @@
 
 | 导航 | 入口 |
 | --- | --- |
-| 结构参考 | [进入](./images/) |
+| 结构参考 | [进入](./images/WALL%C2%B7E%20Reference%20Images.md) |
 | 硬件图纸 | [进入](./hardware/Wllebot_hardware.md) |
 
 
