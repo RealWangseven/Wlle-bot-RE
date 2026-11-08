@@ -1,15 +1,18 @@
 # Hardware
 
-瓦力语音机器人底板的嘉立创 EDA 工程文件。
+瓦力语音机器人底板的原理图与 PCB 图纸。
 
 | 文件 | 内容 |
 | --- | --- |
-| [walle-mainboard.epro2](./walle-mainboard.epro2) | 嘉立创 EDA 专业版 V3 格式的完整工程归档，包含原理图、PCB 与相关库数据 |
+| [Wllebot.pdf](./Wllebot.pdf) | 原理图 PDF，1 页 |
+| [Wllebot_PCB.pdf](./Wllebot_PCB.pdf) | PCB 图纸 PDF，6 页 |
 | [pcb-preview.png](./pcb-preview.png) | 当前 PCB 设计预览截图 |
 
-## 打开工程
+## 查看图纸
 
-使用嘉立创 EDA 专业版的“打开工程”入口导入 `walle-mainboard.epro2`。本次导出使用客户端 V4.1.97。
+点击上面的 PDF 链接，可在 GitHub 预览或下载后查看。PDF 用于阅读图纸，不能替代嘉立创 EDA 可编辑工程。
+
+本目录当前使用两个 PDF 替换原 `.epro2` 文件；可编辑工程保留在本地。
 
 ## 当前状态
 
