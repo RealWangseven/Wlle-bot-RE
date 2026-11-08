@@ -5,12 +5,12 @@ on:
     branches: [main]
     paths:
       - "**/*.md"
-      - ".markdownlint.json"
+      - ".github/workflows/.markdownlint.json"
       - ".github/workflows/markdownlint.yml"
   pull_request:
     paths:
       - "**/*.md"
-      - ".markdownlint.json"
+      - ".github/workflows/.markdownlint.json"
       - ".github/workflows/markdownlint.yml"
   workflow_dispatch:
 
@@ -22,9 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # Rules are explicitly enabled in the shared root configuration.
+      # Rules are explicitly enabled in the explicit configuration below.
       - name: Check Markdown syntax
         uses: DavidAnson/markdownlint-cli2-action@v25
         with:
-          config: .markdownlint.json
+          config: .github/workflows/.markdownlint.json
           globs: "**/*.md"

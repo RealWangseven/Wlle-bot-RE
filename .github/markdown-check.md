@@ -1,6 +1,10 @@
 # Markdown 检查规则
 
-本项目使用仓库根目录的 `.markdownlint.json`，供 GitHub Actions 和编辑器的 markdownlint 扩展共同读取。
+本项目的规则配置位于 `.github/workflows/.markdownlint.json`，GitHub Actions 显式读取该文件。
+
+移动配置文件时，需要同时修改 `.github/workflows/markdownlint.yml` 中的 `config` 路径，以及 `push.paths`、`pull_request.paths` 中的配置文件路径。
+
+编辑器通常自动查找项目根目录的配置；当前配置不在根目录，使用编辑器检查时需要显式指定该路径，否则本地与 GitHub 的检查规则可能不同。
 
 只启用以下规则；其他规则默认关闭，工具升级新增的规则不会自动成为检查要求。
 
