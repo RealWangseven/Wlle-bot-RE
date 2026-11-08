@@ -137,9 +137,9 @@ flowchart TB
 
 ### 在线仓库与技术资料
 
-| 项目或文档        | 用途              | 链接                                                                                                                   |
+| 项目或文档 | 用途 | 链接 |
 | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| 小智 ESP32 主仓库 | 设备端固件及板型适配      | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32)                                                              |
-| 小智音频引脚配置     | 比对当前音频接线        | [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) |
-| 小智 MCP 扩展文档  | 注册设备动作工具        | [docs/mcp-usage.md](https://github.com/78/xiaozhi-esp32/blob/main/docs/mcp-usage.md)                                 |
-| 瓦利机器人        | 参考的机械结构与另一套控制方案 | [Roboen／瓦力机器人制作](https://gitee.com/roboen/wally-robot-manufacturing)                                                 |
+| 小智 ESP32 主仓库 | 设备端固件及板型适配 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) |
+| 小智音频引脚配置 | 比对当前音频接线 | [bread-compact-wifi/config.h](https://github.com/78/xiaozhi-esp32/blob/main/main/boards/bread-compact-wifi/config.h) |
+| 小智 MCP 扩展文档 | 注册设备动作工具 | [docs/mcp-usage.md](https://github.com/78/xiaozhi-esp32/blob/main/docs/mcp-usage.md) |
+| 瓦利机器人 | 参考的机械结构与另一套控制方案 | [Roboen／瓦力机器人制作](https://gitee.com/roboen/wally-robot-manufacturing) |
