@@ -18,8 +18,8 @@
 
 | 导航 | 入口 |
 | --- | --- |
-| 结构参考 | [进入](./images/WALL%C2%B7E%20Reference%20Images.md) |
-| 硬件图纸 | [进入](./hardware/Wllebot_hardware.md) |
+| 结构参考 | [进入](./wlle%20reference%20images.md) |
+| 硬件图纸 | [进入](./hardware/wllebot_hardware.md) |
 
 ## 功能
 
@@ -130,10 +130,10 @@ flowchart TB
 
 | 视图 | 图片 | 参考用途 |
 | --- | --- | --- |
-| 正面 | [walle-front.png](images/walle-front.png) | 眼睛、机械臂与胸前面板布局 |
-| 侧面 | [walle-side.png](images/walle-side.png) | 颈部、手臂与履带比例 |
-| 背面 | [walle-back.png](images/walle-back.png) | 背板与电池仓 |
-| 俯视 | [walle-top.png](images/walle-top.png) | 整机占地与履带间距 |
+| 正面 | [walle-front.png](images/walle_front.png) | 眼睛、机械臂与胸前面板布局 |
+| 侧面 | [walle-side.png](images/walle_side.png) | 颈部、手臂与履带比例 |
+| 背面 | [walle-back.png](images/walle_back.png) | 背板与电池仓 |
+| 俯视 | [walle-top.png](images/walle_top.png) | 整机占地与履带间距 |
 
 ### 在线仓库与技术资料
 
